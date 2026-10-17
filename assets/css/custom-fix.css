@@ -24,7 +24,7 @@
 /* menu: one line only, fills the space after the logo, never wraps */
 @media (min-width: 1200px) {
   .header .header_center_part { flex: 1 1 auto; text-align: center; }
-  .header .mainnav ul.main-menu { white-space: nowrap; }
+  .header .mainnav ul.main-menu > li > a { white-space: nowrap; }
   .header .mainnav ul.main-menu > li + li { margin-left: clamp(24px, 3.2vw, 70px); }
   .header .header_right_part { min-width: 0; }
 }
@@ -78,3 +78,8 @@ body .social-box ul li a.sb-ig:hover {
 
 /* footer bottom row spacing */
 .footer .social-box.style-oval ul { gap: 14px; }
+
+/* Services dropdown: items stack vertically, one per line */
+.header .mainnav ul.main-menu li ul { white-space: normal; width: max-content; min-width: 260px; }
+.header .mainnav ul.main-menu li ul li { display: block; width: 100%; margin-left: 0; }
+.header .mainnav ul.main-menu li ul li a { display: block; white-space: nowrap; }
